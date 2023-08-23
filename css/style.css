@@ -49,6 +49,11 @@ header ul li a {
     font-weight: 400;
     margin-left: 40px;
     text-decoration: none;
+    transition: 0.5s;
+}
+
+.menulink:hover {
+    color: #017143;
 }
 
 .content {
@@ -81,16 +86,26 @@ header ul li a {
     color: #333;
 }
 
-.content .textBox a {
+.btnlearn {
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
-    background: #017143;
-    color: #fff;
+    /* background: #017143;
+    color: #fff; */
     border-radius: 40px;
+    border: #009c57 solid 5px;
     font-weight: 500;
     letter-spacing: 1px;
     text-decoration: none;
+    transition: 0.5s;
+    font-weight: 600;
+    color: black;
+}
+
+.btnlearn:hover {
+    /* background-color: #6affc3; */
+    background-color: #009c57;
+    color: black;
 }
 
 .content .imgBox{
@@ -151,7 +166,7 @@ header ul li a {
     filter: invert(1);
 }
 
-.circle {
+/* .circle {
     position: absolute;
     top: 0;
     left: 0;
@@ -160,8 +175,59 @@ header ul li a {
     background: #017143;
     clip-path: circle(600px at right 800px);
     
-}
+} */
 
 section {
     background: #e1e9de;
+}
+
+#languageSelect {
+
+-webkit-appearance: none;
+/* Remove estilo padrão do Chrome */
+-moz-appearance: none;
+/* Remove estilo padrão do FireFox */
+appearance: none;
+/* Remove estilo padrão do FireFox*/
+background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+/* Imagem de fundo (Seta) */
+background-position: 218px center;
+/*Posição da imagem do background*/
+width: 150px;
+/* Tamanho do select, maior que o tamanho da div "div-select" */
+height: 30px;
+/* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+border: 1px solid #017143;
+}
+
+#languageSelect option {
+    text-align: center;
+}
+
+#languageSelect option:hover{
+    cursor: pointer;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right 800px);
+    transition: transform 0.5s ease; /* Adicione a transição para a propriedade transform */
+}
+
+@keyframes slideImage {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.1); opacity: 0; }
+}
+
+.starbucks.animate-image {
+    animation: slideImage 1s ease;
+}
+
+.circle.animate-circle {
+    transform: translateX(100%); /* Move o círculo para fora da tela */
 }

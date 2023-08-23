@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starbucks</title>
 
+    <link rel="shortcut icon" href="imgs/green.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,27 +14,47 @@
         <header>
             <a href="#" class="logo"><img src="imgs/logo.png" alt=""></a>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">What's New</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><select name="lang" id="languageSelect">
+                        <option value="en">English  &#127482;&#127480;</option>
+                        <option value="pt-br">Portugues &#x1F1E7;&#x1F1F7;</option>
+                    </select>
+                </li>
+
+                <!-- <li><a class="menulink" href="#">Home</a></li>
+                <li><a class="menulink" href="#">Menu</a></li>
+                <li><a class="menulink" href="#">What's New</a></li>
+                <li><a class="menulink" href="#">Contact</a></li> -->
+
+
+                <li><a class="menulink" href="#" data-text="home"></a></li>
+                <li><a class="menulink" href="#" data-text="menu"></a></li>
+                <li><a class="menulink" href="#" data-text="whatsNew"></a></li>
+                <li><a class="menulink" href="#" data-text="contact"></a></li>
             </ul>
 
         </header>
         <div class="content">
          <div class="textBox">
-            <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rerum officia necessitatibus expedita totam quos, neque, voluptate nesciunt explicabo quas quam qui, esse eum repellat molestias illum nemo dolorem aut.</p>
-            <a href="#">Learn More</a>
+            <h2 id="title" >It's not just Coffee <br>It's <span>Starbucks</span></h2>
+            <p data-text="textStar">Starbucks is an American multinational company, with the largest chain of coffee shops in the world, which currently has coffee shops all over the world. It has its headquarters in the city of Seattle, state of Washington.</p>
+            <a class="btnlearn" href="#" data-text="learnMore">Learn More</a>
             </div>
             <div class="imgBox">
                 <img src="imgs/img1.png" class="starbucks">
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="imgs/thumb1.png" onclick="imgSlider('imgs/img1.png');changeCircleColor('#017143')"></li>
+
+            <!-- <li><img src="imgs/thumb1.png" onclick="imgSlider('imgs/img1.png');changeCircleColor('#017143')"></li>
             <li><img src="imgs/thumb2.png" onclick="imgSlider('imgs/img2.png');changeCircleColor('#eb7495')"></li>
-            <li><img src="imgs/thumb3.png" onclick="imgSlider('imgs/img3.png');changeCircleColor('#d752b1')"></li>
+            <li><img src="imgs/thumb3.png" onclick="imgSlider('imgs/img3.png');changeCircleColor('#d752b1')"></li> -->
+
+            <li><img src="imgs/thumb1.png" onclick="animateImage('imgs/img1.png', '#017143')"></li>
+            <li><img src="imgs/thumb2.png" onclick="animateImage('imgs/img2.png', '#eb7495')"></li>
+            <li><img src="imgs/thumb3.png" onclick="animateImage('imgs/img3.png', '#d752b1')"></li>
+        
+
+
         </ul>
         <ul class="sci">
             <li><a href="#"><img src="imgs/facebook.png"></a></li>
@@ -42,6 +63,6 @@
         </ul>
     </section>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
