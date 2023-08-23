@@ -49,25 +49,23 @@ function changeCircleColor(color) {
 
 const languageSelect = document.getElementById('languageSelect');
 const title = document.getElementById('title');
-const menuLinks = document.querySelectorAll('.menulink');
+const paragraph = document.querySelector('[data-text="textStar"]');
+const learnMoreBtn = document.querySelector('[data-text="learnMore"]');
 
 function loadLanguage(language) {
     fetch(`languages/${language}.json`)
         .then(response => response.json())
         .then(data => {
             title.innerHTML = data.title;
-            menuLinks.forEach(link => {
-                const textKey = link.getAttribute('data-text');
-                link.textContent = data[textKey];
-            });
+            paragraph.textContent = data.textStar;
+            learnMoreBtn.textContent = data.learnMore;
         });
 }
 
-// Carregar o idioma padrão 'en' quando a página for carregada
+// Load the default language 'en' when the page loads
 loadLanguage('en');
 
 languageSelect.addEventListener('change', function() {
     const selectedLanguage = languageSelect.value;
     loadLanguage(selectedLanguage);
 });
- 
