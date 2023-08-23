@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+section{
+    background: #e1e9de;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.menulink:hover {
+    color: #017143;
+}
+
+#languageSelect {
+
+    -webkit-appearance: none;
+    /* Remove estilo padrão do Chrome */
+    -moz-appearance: none;
+    /* Remove estilo padrão do FireFox */
+    appearance: none;
+    /* Remove estilo padrão do FireFox*/
+    background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+    /* Imagem de fundo (Seta) */
+    background-position: 218px center;
+    /*Posição da imagem do background*/
+    width: 150px;
+    /* Tamanho do select, maior que o tamanho da div "div-select" */
+    height: 30px;
+    /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+    border: 1px solid #017143;
+    }
+    
+    #languageSelect option {
+        text-align: center;
+    }
+    
+    #languageSelect option:hover{
+        cursor: pointer;
+    }

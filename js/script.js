@@ -1,12 +1,3 @@
-// function imgSlider(anything){
-//     document.querySelector('.starbucks').src = anything;
-// }
-
-// function changeCircleColor(color){
-//     const circle = document.querySelector('.circle')
-//     circle.style.background = color;
-// }
-
 // Animações da imagem e circulo
 // Função para animar a troca de imagem e cor do círculo
 function animateImage(imageSrc, circleColor) {
@@ -35,7 +26,6 @@ function animateImage(imageSrc, circleColor) {
         image.classList.remove('animate-image');
     }, 700); // Tempo para reverter a animação da imagem (em milissegundos)
 }
- 
 
 function imgSlider(anything) {
     document.querySelector('.starbucks').src = anything;
@@ -45,27 +35,34 @@ function changeCircleColor(color) {
     const circle = document.querySelector('.circle')
     circle.style.background = color;
 }
-// Linguagens --
+
+// Linguagens
 
 const languageSelect = document.getElementById('languageSelect');
 const title = document.getElementById('title');
+const menuLinks = document.querySelectorAll('.menulink');
 const paragraph = document.querySelector('[data-text="textStar"]');
-const learnMoreBtn = document.querySelector('[data-text="learnMore"]');
+const learnMoreButton = document.querySelector('.btnlearn');
 
 function loadLanguage(language) {
     fetch(`languages/${language}.json`)
         .then(response => response.json())
         .then(data => {
             title.innerHTML = data.title;
-            paragraph.textContent = data.textStar;
-            learnMoreBtn.textContent = data.learnMore;
+            menuLinks.forEach(link => {
+                const textKey = link.getAttribute('data-text');
+                link.textContent = data[textKey];
+            });
+            paragraph.textContent = data.textStar; // Traduz o parágrafo
+            learnMoreButton.textContent = data.learnMore; // Traduz o botão "Learn More"
         });
 }
 
-// Load the default language 'en' when the page loads
+// Carregar o idioma padrão 'en' ou ingles quando a página for carregada
 loadLanguage('en');
 
 languageSelect.addEventListener('change', function() {
     const selectedLanguage = languageSelect.value;
     loadLanguage(selectedLanguage);
 });
+ 
