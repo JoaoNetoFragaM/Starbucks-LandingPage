@@ -231,3 +231,7 @@ border: 1px solid #017143;
 .circle.animate-circle {
     transform: translateX(100%); /* Move o círculo para fora da tela */
 }
+
+#homebtn{
+    border-bottom: #009c57 3px solid;
+}

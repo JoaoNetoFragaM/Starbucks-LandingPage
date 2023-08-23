@@ -69,10 +69,14 @@ header ul li a {
     border: 1px solid #017143;
     }
     
-    #languageSelect option {
-        text-align: center;
-    }
-    
-    #languageSelect option:hover{
-        cursor: pointer;
-    }
+#languageSelect option {
+    text-align: center;
+}
+
+#languageSelect option:hover{
+    cursor: pointer;
+}
+
+#wnewbtn{
+    border-bottom: #009c57 3px solid;
+}
